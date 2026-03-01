@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (contains API keys)
+.env
+
+# Qdrant persistent storage
+qdrant_storage/
+
+# PDF source documents (may be copyrighted)
+pdfs/*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Logs
+*.log
+out.txt

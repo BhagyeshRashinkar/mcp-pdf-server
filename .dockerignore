@@ -1,0 +1,7 @@
+node_modules
+qdrant_storage
+.git
+.env
+dist
+out.txt
+pdfs
