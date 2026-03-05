@@ -10,7 +10,6 @@ An **MCP (Model Context Protocol)** server that lets AI assistants **query your 
 - **📄 Auto PDF Discovery** — Automatically finds, extracts, chunks, and embeds all PDFs in your folder
 - **🔍 Vector Search** — Retrieves the most relevant passages before generating answers
 - **🐳 Docker-Ready** — Runs as a containerized server with one command
-- **⚡ NVIDIA AI** — Powered by NVIDIA's embedding and generation models
 - **🗄️ Qdrant** — Fast, open-source vector database for similarity search
 
 ---
@@ -23,7 +22,7 @@ An **MCP (Model Context Protocol)** server that lets AI assistants **query your 
 │              │                     │                   │              │ Vector DB│
 └─────────────┘                     │  1. Embed question │              └──────────┘
                                     │  2. Search vectors │
-                                    │  3. Generate answer│   NVIDIA API
+                                    │  3. Generate answer│   LLM API
                                     │                    │◄────────────►
                                     └───────────────────┘   (Embeddings
                                                             + Generation)
@@ -154,7 +153,7 @@ mcp-pdf-server/
 ├── src/
 │   ├── server.ts             # MCP server entry point
 │   ├── llm/
-│   │   └── provider.ts       # NVIDIA API client (embed + generate)
+│   │   └── provider.ts       # LLM API client (embed + generate)
 │   ├── vector/
 │   │   └── qdrant.ts         # Qdrant client config
 │   └── ingest/
