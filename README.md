@@ -30,7 +30,7 @@ An **MCP (Model Context Protocol)** server that lets AI assistants **query your 
 ```
 
 1. You ask a question via your AI assistant.
-2. The server **embeds** the question using NVIDIA's embedding model.
+2. The server **embeds** the question using your choice of embedding model.
 3. It **searches** Qdrant for the top 5 most relevant text chunks from your PDFs.
 4. It **generates** an answer using an LLM, grounded in the retrieved context.
 
@@ -42,7 +42,7 @@ An **MCP (Model Context Protocol)** server that lets AI assistants **query your 
 
 - [Docker & Docker Compose](https://docs.docker.com/get-docker/)
 - [Node.js 20+](https://nodejs.org/) (for ingestion only)
-- [NVIDIA API Key](https://build.nvidia.com/) (free tier available)
+- [LLM API Key]
 
 ### 1. Clone & Configure
 
@@ -133,7 +133,7 @@ Add to your AI assistant's MCP config (e.g., `mcp_config.json`):
 
 | Variable            | Description                   | Default                           |
 | ------------------- | ----------------------------- | --------------------------------- |
-| `API_KEY`           | NVIDIA API key                | _(required)_                      |
+| `API_KEY`           | LLM API key                   | _(required)_                      |
 | `EMBED_MODEL`       | Embedding model               | `nvidia/nv-embedqa-e5-v5`         |
 | `GEN_MODEL`         | Generation model              | `qwen/qwen2.5-coder-32b-instruct` |
 | `COLLECTION_NAME`   | Qdrant collection name        | `documents`                       |
